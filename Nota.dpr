@@ -3,7 +3,8 @@ program Nota;
 uses
   Vcl.Forms,
   frmPrincipal in 'SCR\VIEW\frmPrincipal.pas' {Form1},
-  nota.controller.NotaFiscal in 'SCR\CONTROLLER\nota.controller.NotaFiscal.pas';
+  nota.controller.NotaFiscal in 'SCR\CONTROLLER\nota.controller.NotaFiscal.pas',
+  nota.controller.NotaFiscal.Interfaces in 'SCR\CONTROLLER\nota.controller.NotaFiscal.Interfaces.pas';
 
 {$R *.res}
 
