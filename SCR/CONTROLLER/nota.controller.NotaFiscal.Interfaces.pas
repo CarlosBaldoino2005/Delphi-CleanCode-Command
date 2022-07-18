@@ -21,12 +21,14 @@ type
     function Enviar  : iNotaFiscal;
     function Gravar  : iNotaFiscal;
     function Email   : iNotaFiscal;
-
+    function ImportarPedido(Value : Integer) : iNotaFiscal;
   end;
 
   iNotaFiscalView = interface
     ['{D7270ABB-EC84-4221-879D-14CF5E332A14}']
     function EnviarNotaSefaz : iNotaFiscal;
+    function EnviarNotaSefazSemEmail : iNotaFiscal;
+    function GerarNotaPedido(Codigo : Integer) : iNotaFiscal;
   end;
 
 implementation

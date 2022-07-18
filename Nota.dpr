@@ -10,7 +10,8 @@ uses
   nota.controller.notafiscal.Enviar in 'SCR\CONTROLLER\nota.controller.notafiscal.Enviar.pas',
   nota.controller.notafiscal.Gravar in 'SCR\CONTROLLER\nota.controller.notafiscal.Gravar.pas',
   nota.controller.notafiscal.Email in 'SCR\CONTROLLER\nota.controller.notafiscal.Email.pas',
-  nota.controller.Invoker in 'SCR\CONTROLLER\nota.controller.Invoker.pas';
+  nota.controller.Invoker in 'SCR\CONTROLLER\nota.controller.Invoker.pas',
+  nota.controller.notafiscal.ImportarPedido in 'SCR\CONTROLLER\nota.controller.notafiscal.ImportarPedido.pas';
 
 {$R *.res}
 

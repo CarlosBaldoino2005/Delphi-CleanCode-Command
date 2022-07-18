@@ -7,8 +7,8 @@
     <Transaction>2022/01/08 18:31:53.000.350,=D:\OneDrive - Etec Centro Paula Souza\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2022/05/05 17:38:19.000.066,=D:\OneDrive - Etec Centro Paula Souza\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2022/07/17 19:51:04.700,=D:\OneDrive - Etec Centro Paula Souza\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/07/17 19:55:34.753,D:\OneDrive - Etec Centro Paula Souza\Git Projetos\Delphi\Clean Code\Command\SCR\VIEW\frmPrincipal.pas=D:\OneDrive - Etec Centro Paula Souza\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2022/07/17 19:55:34.753,D:\OneDrive - Etec Centro Paula Souza\Git Projetos\Delphi\Clean Code\Command\SCR\VIEW\frmPrincipal.dfm=D:\OneDrive - Etec Centro Paula Souza\Documentos\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/07/17 19:55:34.753,D:\OneDrive - Etec Centro Paula Souza\Git Projetos\Delphi\Clean Code\Command\SCR\VIEW\frmPrincipal.pas=D:\OneDrive - Etec Centro Paula Souza\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2022/07/17 19:55:48.914,D:\OneDrive - Etec Centro Paula Souza\Git Projetos\Delphi\Clean Code\Command\Nota.dproj=D:\OneDrive - Etec Centro Paula Souza\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2022/07/17 19:55:57.240,=D:\OneDrive - Etec Centro Paula Souza\Git Projetos\Delphi\Clean Code\Command\Unit1.pas</Transaction>
     <Transaction>2022/07/17 19:58:56.266,D:\OneDrive - Etec Centro Paula Souza\Git Projetos\Delphi\Clean Code\Command\SCR\CONTROLLER\nota.controller.NotaFiscal.pas=D:\OneDrive - Etec Centro Paula Souza\Git Projetos\Delphi\Clean Code\Command\Unit1.pas</Transaction>
@@ -27,5 +27,7 @@
     <Transaction>2022/07/17 20:43:31.590,D:\OneDrive - Etec Centro Paula Souza\Git Projetos\Delphi\Clean Code\Command\SCR\CONTROLLER\nota.controller.notafiscal.Email.pas=D:\OneDrive - Etec Centro Paula Souza\Git Projetos\Delphi\Clean Code\Command\Unit2.pas</Transaction>
     <Transaction>2022/07/17 20:46:38.058,=D:\OneDrive - Etec Centro Paula Souza\Git Projetos\Delphi\Clean Code\Command\Unit3.pas</Transaction>
     <Transaction>2022/07/17 20:47:30.301,D:\OneDrive - Etec Centro Paula Souza\Git Projetos\Delphi\Clean Code\Command\SCR\CONTROLLER\nota.controller.Invoker.pas=D:\OneDrive - Etec Centro Paula Souza\Git Projetos\Delphi\Clean Code\Command\Unit3.pas</Transaction>
+    <Transaction>2022/07/17 21:29:51.042,=D:\OneDrive - Etec Centro Paula Souza\Git Projetos\Delphi\Clean Code\Command\Unit1.pas</Transaction>
+    <Transaction>2022/07/17 21:30:14.541,D:\OneDrive - Etec Centro Paula Souza\Git Projetos\Delphi\Clean Code\Command\SCR\CONTROLLER\nota.controller.notafiscal.ImportarPedido.pas=D:\OneDrive - Etec Centro Paula Souza\Git Projetos\Delphi\Clean Code\Command\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

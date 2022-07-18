@@ -15,19 +15,22 @@ type
     public
       constructor Create;
       destructor Destroy; override;
-      class function New : iNotaFiscal;
+      class function New : iNotaFiscalView;
       function Criar : iNotaFiscal;
       function Validar : iNotaFiscal;
       function Enviar : iNotaFiscal;
       function Gravar : iNotaFiscal;
       function Email : iNotaFiscal;
       function EnviarNotaSefaz : iNotaFiscal;
+      function ImportarPedido(Value : Integer) : iNotaFiscal;
+      function EnviarNotaSefazSemEmail : iNotaFiscal;
+      function GerarNotaPedido(Codigo : Integer) : iNotaFiscal;
   end;
 
 implementation
 
 uses
-  nota.controller.Invoker;
+  nota.controller.Invoker, nota.controller.notafiscal.ImportarPedido;
 
 { TControllerNotaFiscal }
 
@@ -70,12 +73,43 @@ begin
       .Execute;
 end;
 
+function TControllerNotaFiscal.EnviarNotaSefazSemEmail: iNotaFiscal;
+begin
+  Result := Self;
+  TControllerInvoker
+    .New
+      .Add(TControllerNotafiscalCriar.New(self))
+      .Add(TControllerNotafiscalValidar.New(self))
+      .Add(TControllerNotafiscalEnviar.New(self))
+      .Add(TControllerNotafiscalGravar.New(self))
+      .Execute;
+end;
+
+function TControllerNotaFiscal.GerarNotaPedido(Codigo: Integer): iNotaFiscal;
+begin
+  Result := Self;
+  TControllerInvoker
+    .New
+      .Add(TControllerNotafiscalImportarPedido.New(self,Codigo))
+      .Add(TControllerNotafiscalCriar.New(self))
+      .Add(TControllerNotafiscalValidar.New(self))
+      .Add(TControllerNotafiscalEnviar.New(self))
+      .Add(TControllerNotafiscalGravar.New(self))
+      .Add(TControllerNotafiscalEmail.New(self))
+      .Execute;
+end;
+
 function TControllerNotaFiscal.Gravar: iNotaFiscal;
 begin
   Result := Self;
 end;
 
-class function TControllerNotaFiscal.New: iNotaFiscal;
+function TControllerNotaFiscal.ImportarPedido(Value: Integer): iNotaFiscal;
+begin
+  Result := Self;
+end;
+
+class function TControllerNotaFiscal.New: iNotaFiscalView;
 begin
   Result := Self.Create;
 end;
