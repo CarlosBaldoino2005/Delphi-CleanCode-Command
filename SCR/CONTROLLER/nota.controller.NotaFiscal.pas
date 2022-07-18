@@ -2,10 +2,15 @@ unit nota.controller.NotaFiscal;
 
 interface
 
-uses nota.controller.NotaFiscal.Interfaces;
+uses nota.controller.NotaFiscal.Interfaces,
+     nota.controller.notafiscal.Email,
+     nota.controller.notafiscal.Enviar,
+     nota.controller.notafiscal.Gravar,
+     nota.controller.notafiscal.Validar,
+     nota.controller.notafiscal.Criar;
 
 type
-  TControllerNotaFiscal = class(TInterfacedObject, iNotaFiscal)
+  TControllerNotaFiscal = class(TInterfacedObject, iNotaFiscal,iNotaFiscalView)
     private
     public
       constructor Create;
@@ -20,6 +25,9 @@ type
   end;
 
 implementation
+
+uses
+  nota.controller.Invoker;
 
 { TControllerNotaFiscal }
 
@@ -52,6 +60,14 @@ end;
 function TControllerNotaFiscal.EnviarNotaSefaz: iNotaFiscal;
 begin
   Result := Self;
+  TControllerInvoker
+    .New
+      .Add(TControllerNotafiscalCriar.New(self))
+      .Add(TControllerNotafiscalValidar.New(self))
+      .Add(TControllerNotafiscalEnviar.New(self))
+      .Add(TControllerNotafiscalGravar.New(self))
+      .Add(TControllerNotafiscalEmail.New(self))
+      .Execute;
 end;
 
 function TControllerNotaFiscal.Gravar: iNotaFiscal;
