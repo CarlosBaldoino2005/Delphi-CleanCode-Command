@@ -88,15 +88,13 @@ end;
 function TControllerNotaFiscal.GerarNotaPedido(Codigo: Integer): iNotaFiscal;
 begin
   Result := Self;
-  TControllerInvoker
-    .New
+  TControllerInvoker.New
       .Add(TControllerNotafiscalImportarPedido.New(self,Codigo))
       .Add(TControllerNotafiscalCriar.New(self))
       .Add(TControllerNotafiscalValidar.New(self))
       .Add(TControllerNotafiscalEnviar.New(self))
       .Add(TControllerNotafiscalGravar.New(self))
-      .Add(TControllerNotafiscalEmail.New(self))
-      .Execute;
+      .Add(TControllerNotafiscalEmail.New(self));
 end;
 
 function TControllerNotaFiscal.Gravar: iNotaFiscal;
